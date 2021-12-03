@@ -1,0 +1,37 @@
+<h2 class="content-block">Pivot Grig</h2>
+<div class="content-block">
+    <div class="dx-card responsive-paddings"><div class="long-title"><h3>Sales Amount by Region</h3></div>
+    <dx-button
+      text="filter by date"
+      type="normal"
+      [width]="120"
+      (onClick)="click($event)"
+    >
+    </dx-button>
+    <dx-pivot-grid
+      id="sales"
+      [allowSortingBySummary]="false"
+      [allowFiltering]="true"
+      [showBorders]="true"
+      [encodeHtml]="false"
+      [allowExpandAll]="false"
+      [showColumnGrandTotals]="false"
+      [showRowGrandTotals]="false"
+      [showRowTotals]="false"
+      [showColumnTotals]="false"
+      [height]="440"
+      [dataSource]="dataSource"
+    >
+      <dxo-field-chooser [enabled]="true"></dxo-field-chooser>
+      <dxo-field-panel
+        [showRowFields]="true"
+        [showColumnFields]="true"
+        [visible]="true"
+        [allowFieldDragging]="false"
+        [showFilterFields]="false"
+        [showDataFields]="false"
+      >
+      </dxo-field-panel>
+    </dx-pivot-grid>
+    </div>
+</div>
